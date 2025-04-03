@@ -49,27 +49,25 @@ class StringCalculator
 end
 
 
-input_str = ""  # input = "" o/p = 0
-input_str = "5" # input = "5" o/p = 5
-input_str = "1,5" # input = "1,5" o/p = 6
-input_str = "10,20,30,40,100"
-input_str = "1\n2\n3" # input = "1\n2\n3" o/p = 6
-input_str = "//;\n1;2" # input = "//;\n1;2" o/p = 3
-
-
-input = "1,-2,-3,-4"
+input_str_add = ""  # input = "" o/p = 0
+input_str_add_single_number_string = "5" # input = "5" o/p = 5
+input_str_add_multiple_number_string = "1,5" # input = "1,5" o/p = 6
+#input_str = "10,20,30,40,100"
+input_str_add_method_for_newlines = "1\n2\n3" # input = "1\n2\n3" o/p = 6
+input_str_delimiter_str = "//;\n1;2" # input = "//;\n1;2" o/p = 3
+input = "1,-2,-3,-4" # input = "1,-2,-3,-4" o/p = Negative numbers not allowed: -2, -3, -4
 
 
 s = StringCalculator.new
-s.add(input_str)
-s.add_multiple_numbers(input_str)
-s.add_method_for_newlines(input_str)
-s.delimiter_str(input_str)
+s.add(input_str_add)
+s.add_multiple_numbers(input_str_add_multiple_number_string)
+s.add_method_for_newlines(input_str_add_method_for_newlines)
+s.delimiter_str(input_str_delimiter_str)
 
 
  begin
   s = StringCalculator.new
-  p result = s.add_num(input)
+  result = s.add_num(input)
 rescue StringCalculator::NegativeNumberError => e
   puts e.message  # => "Negative numbers not allowed: -3"
 end
