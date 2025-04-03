@@ -38,6 +38,20 @@ RSpec.describe StringCalculator do
       expect(calc.delimiter_str("//;\n1;2")). to eq(3)
     end  
 
+    
+    context 'when the input contains negative numbers' do
+      it 'raises a NegativeNumberError with a proper message' do
+        calc = StringCalculator.new
+
+        # Test with negative number in the input
+        expect { calc.add_num("1,2,-3,4") }.to raise_error(StringCalculator::NegativeNumberError, "Negative numbers not allowed: -3")
+
+        # Test with multiple negative numbers
+        expect { calc.add_num("1,-2,-3,-4") }.to raise_error(StringCalculator::NegativeNumberError, "Negative numbers not allowed: -2, -3, -4")
+      end
+    end
+
+
   end
 
 end 
