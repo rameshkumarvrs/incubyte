@@ -21,9 +21,6 @@ class StringCalculator
       if str.start_with?("//")
         delimiter_val, numbers =  str.split("\n", 2)
         delimiter = delimiter_val[2..-1]
-        #p delimiter
-        #p delimiter_val
-        #p numbers
       else
         delimiter = " "
       end  
@@ -37,7 +34,7 @@ end
 #input_str = "1,5" # input = "1,5" o/p = 6
 #input_str = "10,20,30,40,100"
 #input_str = "1\n2\n3" # input = "1\n2\n3" o/p = 6
-input_str = "//;\n1;2"
+input_str = "//;\n1;2" # input = "//;\n1;2" o/p = 3
 
 
 s = StringCalculator.new

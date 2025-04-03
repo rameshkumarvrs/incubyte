@@ -33,6 +33,11 @@ RSpec.describe StringCalculator do
       expect(calc.add_method_for_newlines("1\n2 3")).to eq(6)
     end  
 
+    it "added the cutom delimeter and sum " do
+      calc = StringCalculator.new
+      expect(calc.delimiter_str("//;\n1;2")). to eq(3)
+    end  
+
   end
 
 end 
