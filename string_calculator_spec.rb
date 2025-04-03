@@ -16,6 +16,11 @@ RSpec.describe StringCalculator do
     it "return the sum of digits of the string" do
       calc = StringCalculator.new
       expect(calc.add("1,5")).to eq(6)
+    end 
+
+    it "adds multiple numbers in string" do
+      calc = StringCalculator.new
+      expect(calc.add_multiple_numbers("10,20,30,40")).to eq(100)
     end  
 
   end
