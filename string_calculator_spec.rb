@@ -28,7 +28,7 @@ RSpec.describe StringCalculator do
       expect(calc.add_method_for_newlines("1\n2\n3")).to eq(6)
     end  
 
-    it "adds numbers seperated by new lines" do
+    it "adds numbers seperated by spaces" do
       calc = StringCalculator.new
       expect(calc.add_method_for_newlines("1\n2 3")).to eq(6)
     end  
