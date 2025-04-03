@@ -12,7 +12,7 @@ class StringCalculator
   end
 
   #step3 Method to handle newline between Numbers
-  def add_method_for_space_newlines(str)
+  def add_method_for_newlines(str)
     str.split(/\s+|\n/).map(&:to_i).sum
   end
 end
@@ -28,5 +28,5 @@ end
 s = StringCalculator.new
 s.add(input_str)
 s.add_multiple_numbers(input_str)
-p s.add_method_for_space_newlines(input_str)
+p s.add_method_for_newlines(input_str)
 

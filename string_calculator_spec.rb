@@ -23,6 +23,16 @@ RSpec.describe StringCalculator do
       expect(calc.add_multiple_numbers("10,20,30,40")).to eq(100)
     end  
 
+    it "adds numbers seperated by new lines" do
+      calc = StringCalculator.new
+      expect(calc.add_method_for_newlines("1\n2\n3")).to eq(6)
+    end  
+
+    it "adds numbers seperated by new lines" do
+      calc = StringCalculator.new
+      expect(calc.add_method_for_newlines("1\n2 3")).to eq(6)
+    end  
+
   end
 
 end 
